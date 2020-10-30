@@ -20,8 +20,8 @@ for(let api of apis){
 
 
 router.use((err, req, res, next) => {
-    console.log(1222222222222222);
-    console.error(err);
-    res.status(err.status).json( err );
+    // console.error(err);
+    res.status(err.status).json(err);
 });
+
 module.exports = router;

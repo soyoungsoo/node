@@ -1,14 +1,15 @@
 var createError = require('http-errors');
 var express = require('express');
+require('express-async-errors');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
-
-
 var app = express();
 
 const options = { etag: false };
 app.set("etag", false);
+
+global.__base = __dirname + '/public/';
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
